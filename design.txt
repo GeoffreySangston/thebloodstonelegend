@@ -1,0 +1,90 @@
+
+
+ScreenArea
+
+GameObject
+	
+Tile
+	-traversible,not traversible, door (doors pan screen over a screen), warps (warps
+	either load new maps or move you to a different spot on the same map)
+		- many traversible things can also be doors
+	Dirt
+	Water
+	Stone
+	Lock
+	Ladder
+	Cave
+	Tree
+	
+	
+Item
+	NormalShield
+	HolyShield
+	Statue
+	-pickable,not pickable
+	NormalSword
+	Excalibur
+	Torch
+	Staff
+	Bow
+	WhiteAmulet
+	KnightArmor
+	Key
+	Ruby
+	Potion
+	WitchBrew (like bombs)
+	ShieldPiece (adds to max life)
+	Boat
+	PushableStone
+	HolyBook
+	PieceOfGrail (like tri force)
+	
+Projectile
+	Arrow (bow,goblin)
+	Flame (staff,witch, dragon)
+	HolyBolt (Excalibur)
+	etc...
+	
+Player
+Monster
+	Ogre
+	Wolf
+	Goblin
+	Kraken (like zelda fish enemy)
+	Locust
+	WitchBoss
+	ArmoredTurtleBoss
+	GiantBoss
+	BlackKnightBoss (x3)
+	GiantSquidBoss
+	DragonBoss
+
+Collision
+
+NPC (npc zone)
+	- dialogue
+	
+	
+input
+rendering
+	- map
+		- tile layer, item layer, monster layer
+	- monsters, players, items, projectiles
+	animations
+collision detection, collision handling
+	- damage shoving, sword attack, projectiles
+instancing 
+music, sound effects
+inventory
+
+
+MAINSTATE:MENUA,MENUB,GAME
+GAMESTATE:PLAY,PAUSE,INVENTORY
+mainLoop:
+
+
+
+Each state loads a tilesheet and then contains an array containing tiles, each tile in the tile 
+array has a variable referring to a group of tiles in the tile sheet, a variable referring to how
+many tiles are in the animation, a width/height, and an x/y
+
